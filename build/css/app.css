@@ -360,10 +360,15 @@ html {
   clear: both;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   float: right;
   width: calc(100% - 310px);
   margin-left: 310px;
+  position: relative;
 }
 
 .block {
@@ -428,10 +433,6 @@ html {
   color: #557685;
 }
 
-.slider {
-  overflow: hidden;
-}
-
 .slide {
   height: 843px;
   background-repeat: no-repeat;
@@ -439,11 +440,28 @@ html {
   background-position: 50% 50%;
 }
 
-.slick-prev, .slick-next {
-  color: black;
-  z-index: 999;
+.slick-arrow {
   width: 24px;
   height: 37px;
+  z-index: 222;
+  top: 43%;
+}
+
+.slick-arrow:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+}
+
+.slick-arrow:focus:before, .slick-arrow:hover:before {
+  opacity: 0.75;
+}
+
+.slick-arrow:active:before {
+  opacity: 1;
 }
 
 .slick-prev {
@@ -466,6 +484,28 @@ html {
   width: 24px;
   height: 37px;
   background-position: 0px 0px;
+}
+
+.menu__item a {
+  color: #7b7b7b;
+  font: 300 16px/2em "Open Sans", sans-serif;
+  text-transform: uppercase;
+  transition: all .3s;
+}
+
+.js-menu-active > a {
+  color: #40173f;
+}
+
+.sub-menu {
+  display: none;
+}
+
+.sub-menu__item a {
+  font-size: 14px;
+  line-height: 1.6em;
+  text-transform: none;
+  font-style: italic;
 }
 
 /*# sourceMappingURL=app.css.map */

@@ -2758,6 +2758,14 @@ $(document).ready(function () {
   });
   //////slick
 
+  //var hasSubMenu = $(".menu__item").children(".sub-menu");
+  $(".menu__item").on("click", function () {
+    $(".menu__item").not(this).removeClass("js-menu-active");
+    $(this).addClass("js-menu-active");
+    //if($(this).children(".sub-menu")){
+    $(this).children(".sub-menu").slideToggle();
+    //}
+  });
 
   ///////////
 });

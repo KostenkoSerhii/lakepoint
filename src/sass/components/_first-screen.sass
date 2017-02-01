@@ -1,13 +1,22 @@
 .slider
-	overflow: hidden
+
 .slide
 	height: 843px
 	+cover
-.slick-prev, .slick-next
-	color: black
-	z-index: 999
-	width: 24px	
+.slick-arrow
+	width: 24px
 	height: 37px
+	z-index: 222
+	top: 43%
+	&:before
+		+coverdiv
+		content: ''
+	&:focus, &:hover
+		&:before
+			opacity: 0.75
+	&:active
+		&:before
+			opacity: 1
 .slick-prev
 	left: 25px
 	&:before
