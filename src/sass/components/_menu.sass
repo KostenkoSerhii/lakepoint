@@ -1,5 +1,11 @@
 .menu
-	//margin-top: 150px
+	background: #fff
+	position: relative
+.sidebar__menu
+	margin-top: 20%
+	z-index: 22
+	+r(1499)
+		margin-top: 10px
 .menu__item
 	a
 		color: $menu-color
@@ -9,11 +15,104 @@
 .js-menu-active
 	>a
 		color: $menu-active-color
-.sub-menu
+.sidebar__sub-menu
 	display: none
+	+rh(850)
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		background: #fff
 .sub-menu__item
 	a
 		font-size: 14px
 		line-height: 1.6em
 		text-transform: none
 		font-style: italic
+		+r(991)
+			display: block
+			padding: 5px 0
+.header__menu
+	float: right
+	margin-right: 20px
+	margin-top: 20px
+	+r(767)
+		display: none
+		position: absolute
+		right: 15px
+		width: 170px
+		margin: 0
+		top: 30px
+		text-align: right
+		z-index: 22
+	.menu__item
+		display: inline-block
+		margin-right: 10px
+		+rmin(992)
+			&:last-of-type
+			margin-right: 0
+		+r(991)
+			margin-right: 5px
+		+r(767)
+			display: block
+.header__sub-menu
+	display: none
+	position: absolute
+	z-index: 1
+	background: #fff
+	padding: 0 10px
+	margin-left: -10px
+	+r(767)
+		margin-left: 0
+		width: 100%
+.menu-btn
+	float: right
+	position: relative
+	width: 30px
+	height: 20px
+	overflow: visible
+	+rmin(768)
+		display: none
+	div
+		height: 3px
+		width: 30px
+		z-index: 2
+		background: $gray
+		position: absolute
+		top: 50%
+		margin-top: -2px
+		transition: all .3s
+		&:before
+			transition: all .3s
+			content: ''
+			position: absolute
+			height: 3px
+			width: 30px
+			background: inherit
+		&:before
+			top: -8px
+
+		&:after
+			bottom: -9px
+
+.btn-is-active
+	div
+		height: 2px
+		//+rotate(450)
+		&:before, &:after
+			width: 50%
+			height: 2px
+		&:before
+			+rotate(45)
+			top: 0
+			right: 0
+
+		&:after
+			display: none
+			+rotate(-45)
+			bottom: 0
+			right: 0px
+			
+
+
+
+

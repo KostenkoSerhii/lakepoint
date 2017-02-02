@@ -4,3 +4,45 @@
 	+clr
 a
 	text-decoration: none
+.contact-phone, .contact-mail
+	color: #57615a
+	font: $main-text-font
+.contact-phone
+	margin-bottom: 10px
+.logo
+	display: inline-block
+	width: 100px
+	height: 100px
+	+cover
+	+r(991)
+		width: 70px
+		height: 70px
+.h1
+	color: $green-dark
+	font: 400 22px/0.9em 'Ultra', serif;
+	margin-top: 20px
+	display: inline-block
+	text-align: center
+	text-transform: uppercase
+	position: relative
+	&:before, &:after
+		+s(star)
+		content: ''
+		position: absolute
+		top: 3px
+	&:before
+		left: -20px
+	&:after
+		right: -20px
+	+r(991)
+		font: 400 14px/0.9em 'Ultra', serif;
+		&:before, &:after
+			display: none
+	span
+		font: 700 16px/1.25em "Open Sans", sans-serif
+		color: $blue-light
+.logo2
+	width: 156px
+	height: 91px
+	display: inline-block
+	+cover

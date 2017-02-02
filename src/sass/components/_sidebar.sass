@@ -1,38 +1,28 @@
 .sidebar
 	width: 310px
 	text-align: center
-	padding: 94px 0 40px
-	background-color: #e0e1dc
+	padding: 6% 0 0px
 	position: fixed
+	background: #fff
 	left: 0
 	height: 100%
 	z-index: 222
-.logo
-	display: block
-	width: 100px
-	height: 100px
-	+cover
-	margin: 0 auto
-.h1
-	color: $green-dark
-	font: 400 22px/0.9em 'Ultra', serif;
+	+r(1499)
+		padding: 30px 0 0px
+	+r(1365)
+		display: none
+.sidebar__h1
 	letter-spacing: 12px
-	margin-top: 20px
-	display: inline-block
-	text-align: center
-	text-transform: uppercase
-	position: relative
 	right: -6px
-	&:before, &:after
-		+s(star)
-		content: ''
-		position: absolute
-		top: 3px
-	&:before
-		left: -20px
 	&:after
 		right: -8px
-	span
-		font: 700 16px/1.25em "Open Sans", sans-serif
-		color: $blue-light
-
+.sidebar__footer
+	//position: relative
+	//bottom: 10%
+	position: absolute
+	bottom: 35px
+	left: 50%
+	transform: translateX(-50%)
+	z-index: 1
+.sidebar-logo2
+	margin-bottom: 30px

@@ -1,8 +1,16 @@
-.container
+.global-wrapper
 	float: right
 	width: calc(100% - 310px)
 	margin-left: 310px
 	position: relative
+	+r(1365)
+		width: 100%
+		margin-left: 0
+		float: none
+.container
+	position: relative
+	width: 100%
+	padding: 0 15px
 //margin: 0 auto
 //padding: 0 15px
 //+rmin(768)
