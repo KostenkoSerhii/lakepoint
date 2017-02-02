@@ -20,17 +20,18 @@
     
     <!--begin global-wrapper-->
     <div class="global-wrapper">
+      {% include "partials/_header.html" %}
+      {% block content %}{% endblock %}
+      {% include "partials/_footer.html" %}
+    </div>
+    <!--end global-wrapper-->
 
-     {% block content %}{% endblock %}
-   </div>
-   <!--end global-wrapper-->
-   
- </div>
- <!-- END content -->
+  </div>
+  <!-- END content -->
 
- <!-- BEGIN scripts -->
- <script type="text/javascript" src="js/app.js"></script>
- <!-- END scripts -->
+  <!-- BEGIN scripts -->
+  <script type="text/javascript" src="js/app.js"></script>
+  <!-- END scripts -->
 
 </body>
 </html>

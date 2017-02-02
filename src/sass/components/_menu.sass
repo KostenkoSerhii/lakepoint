@@ -47,7 +47,7 @@
 	.menu__item
 		display: inline-block
 		margin-right: 10px
-		+rmin(992)
+		+r(992)
 			&:last-of-type
 			margin-right: 0
 		+r(991)
@@ -81,7 +81,7 @@
 		top: 50%
 		margin-top: -2px
 		transition: all .3s
-		&:before
+		&:before, &:after
 			transition: all .3s
 			content: ''
 			position: absolute
@@ -90,27 +90,24 @@
 			background: inherit
 		&:before
 			top: -8px
-
+			transform-origin: top right
 		&:after
 			bottom: -9px
-
+			transform-origin: bottom right
 .btn-is-active
 	div
 		height: 2px
-		//+rotate(450)
+		+rotate(90)
 		&:before, &:after
 			width: 50%
 			height: 2px
 		&:before
-			+rotate(45)
-			top: 0
-			right: 0
-
+			transform: translateX(16px) rotate(45deg)
+			top: 1px	
 		&:after
-			display: none
-			+rotate(-45)
-			bottom: 0
-			right: 0px
+			transform: translateX(16px) rotate(-45deg)
+			bottom: 1px
+
 			
 
 

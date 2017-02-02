@@ -11,6 +11,18 @@
 		padding: 30px 0 0px
 	+r(1365)
 		display: none
+	.logo2
+		margin-bottom: 30px
+	.socials
+		&:before
+			content: ''
+			position: absolute
+			left: 50%
+			transform: translateX(-50%)
+			height: 1px
+			width: 30px
+			background-color: #57615a
+			top: -15px
 .sidebar__h1
 	letter-spacing: 12px
 	right: -6px
@@ -24,5 +36,6 @@
 	left: 50%
 	transform: translateX(-50%)
 	z-index: 1
-.sidebar-logo2
-	margin-bottom: 30px
+	+rh(900)
+		bottom: 5px
+	

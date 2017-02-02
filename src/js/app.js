@@ -21,6 +21,7 @@ $(".menu__item").on("click", function(){
 	//if($(this).children(".sub-menu")){
 		$(".menu__item").not($this).children(".sub-menu").slideUp();
 		$($this).children(".sub-menu").slideToggle();
+		//$(".menu-btn").trigger("click");
 	//}
 
 });
@@ -30,9 +31,8 @@ $(".menu-btn").on("click", function(){
 	$(".header__menu").slideToggle();
 	$(".menu__item").removeClass("menu-btn");
 	$(".menu__item").children(".sub-menu").slideUp();
-
 });
-
+/////////////
 
 	///////////
 });

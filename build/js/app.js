@@ -2766,6 +2766,7 @@ $(document).ready(function () {
     //if($(this).children(".sub-menu")){
     $(".menu__item").not($this).children(".sub-menu").slideUp();
     $($this).children(".sub-menu").slideToggle();
+    //$(".menu-btn").trigger("click");
     //}
   });
 
@@ -2775,6 +2776,7 @@ $(document).ready(function () {
     $(".menu__item").removeClass("menu-btn");
     $(".menu__item").children(".sub-menu").slideUp();
   });
+  /////////////
 
   ///////////
 });
