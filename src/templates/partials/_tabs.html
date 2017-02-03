@@ -1,0 +1,35 @@
+<div class="tabs" id="tabs">
+  <!--begin  tabs__item-->
+  {% import "data/data.html" as tests %}
+  {% for test in tests.tabs %}
+  <div class="tabs__item" id="{{test.id}}">
+    <div class="tabs__photo" style="background-image: url('{{test.tab__mainimg}}');"> 
+    </div>
+    <!--begin tab__descr-->
+    <div class="tabs__descr">
+      <h3 class="h3 tab_h3">{{test.name}}</h3>
+      <p class="tabs__article article">
+        {{test.article}}
+      </p>
+      <span class="tabs__price">Homes from {{test.price}}</span>
+      <div class="tabs__links">
+       <a class="tabs__fb" href="{{test.tabs__fb}}" target="_blank"></a>
+       <a class="tabs__tw" href="{{test.tabs__tw}}" target="_blank"></a>
+       <a class="tabs__p" href="{{test.tabs__p}}" target="_blank"></a>
+       <a class="tabs__letter" href="{{test.tabs__letter}}" target="_blank"></a>
+       <a class="tabs__print" href="{{test.tabs__print}}" target="_blank"></a>
+     </div>
+   </div>
+   <!--end tab__descr-->
+ </div>
+ {% endfor %}
+ <!--end tabs__item -->
+ <ul class="tabs-nav">
+   {% for test in tests.tabs %}
+   <li class="tabs-nav__item">
+     <a href="#{{test.id}}" style="background-image: url('{{test.tab__navimg}}');">
+     </a>
+   </li>
+   {% endfor %}
+ </ul>
+</div>

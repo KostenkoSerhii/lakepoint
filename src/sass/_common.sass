@@ -4,11 +4,6 @@
 	+clr
 a
 	text-decoration: none
-.contact-phone, .contact-mail
-	color: #57615a
-	font: $main-text-font
-.contact-phone
-	margin-bottom: 10px
 .logo
 	display: inline-block
 	width: 100px
@@ -39,10 +34,117 @@ a
 		&:before, &:after
 			display: none
 	span
-		font: 700 16px/1.25em "Open Sans", sans-serif
+		font: 700 16px/1.25em $sans
 		color: $blue-light
+.h2
+	color: $main-text-color
+	font: $h2-font
+	position: relative
+	text-transform: uppercase
+	text-align: center
+	&:after
+		content: ''
+		position: absolute
+		bottom: -44px
+		left: 50%
+		transform: translateX(-50%)
+		width: 45px
+		height: 1px
+		background: #bcc0bd
+	+rmin(1366)
+		letter-spacing: 1px
+	+r(767)
+		font: $h2-font-mobile
+	span
+		font-size: 20px
+		display: block
+		+r(767)
+			font-size: 16px
+.h3
+	color: $blue
+	font: 400 30px/0.6em $sans
+	+r(767)
+		font-size: 16px
+		line-height: 1em
 .logo2
 	width: 156px
 	height: 91px
 	display: inline-block
 	+cover
+.socials
+	display: inline-block
+	position: relative
+	a
+		display: inline-block
+	.tw
+		+s(tw)
+		margin-right: 7px
+	.f
+		+s(f)
+.contact-phone, .contact-mail
+	color: #57615a
+	font: $main-text-font
+.contact-phone
+	margin-bottom: 10px
+.article
+	color: $main-text-color
+	font: $main-text-font
+	text-align: left
+	+r(767)
+		font: $main-text-font-mobile
+.youtube-block__inner
+	text-align: center
+	display: block
+	opacity: 0.8
+	background-color: #2c7a5c
+	position: relative
+	width: 100%
+	height: 100%
+	color: #fff
+	padding-top: 102px
+	&:before
+		content: ''
+		position: absolute
+		top: 29%
+		left: 50%
+		transform: translate(-50%, -50%)
+		+arr(29, 33, #fff, r)
+	&:after
+		content: ''
+		+vcenter
+		width: 95%
+		height: 93%
+		border: 2px solid #fff
+	+rmin(1100)
+		opacity: 0.5
+		transition: all .4s
+	+r(991)
+		padding-top: 75px
+	>span
+		font: 400 16px/1.25em $sans
+		display: block
+		margin-bottom: 17px
+	strong
+		font: 600 21px/0.6em $sans
+		letter-spacing: 16px
+		position: relative
+		right: -8px
+		+r(767)
+			right: 0
+			letter-spacing: 0
+		span
+			font-size: 15px
+			display: block
+.youtube-block
+	width: 360px
+	height: 210px
+	position: relative
+	text-transform: uppercase
+	+cover
+	+rmin(1100)
+		&:hover
+			.youtube-block__inner
+				opacity: 0.8
+	+r(991)
+		width: 270px
+		height: 170px

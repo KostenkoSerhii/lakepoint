@@ -1,8 +1,20 @@
-.slider
-
 .slide
-	height: 843px
+	height: 767px
+	+rmin(1501)
+		height: 1000px
 	+cover
+	+r(1365)
+		height: 650px
+	+r(991)
+		height: 500px
+	+r(767)
+		height: 400px
+	+r(550)
+		height: 300px
+	+r(400)
+		height: 200px
+// как тут правильно было сделать, 
+//не совсем понял, поэтому как-то так...
 .slick-arrow
 	width: 24px
 	height: 37px

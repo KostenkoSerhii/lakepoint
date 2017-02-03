@@ -1,0 +1,132 @@
+.tab-wrapper
+	margin-left: 2%
+	+r(991)
+		margin-left: 0
+.tabs__item
+	+clr
+	position: relative
+.tabs__photo
+	float: left
+	+cover
+	width: 692px
+	height: 448px
+	+r(1199)
+		width: 600px
+		height: 400px
+	+r(991)
+		width: 400px
+		height: 230px
+	+r(767)
+		width: 280px
+		height: 130px
+		float: none
+		margin: 0 auto
+.tabs__descr
+	margin-left: 712px
+	padding-right: 17px
+	+r(1199)
+		margin-left: 625px
+	+r(991)
+		margin-left: 415px
+	+r(767)
+		margin-left: 0
+		margin-top: 10px
+	//display: inline-block
+	// float: right
+	//width: 35%
+	//margin-right: 3%
+	//float: right
+	//не понимаю почему не работает если тут 
+	//включить float: right
+.tab_h3
+	+r(767)
+		text-align: center
+.tabs__price
+	color: #7e7d7d
+	font: 700 20px/1em $sans
+	font-style: italic
+	text-align: right
+	display: block
+	margin-top: 35px
+	+r(991)
+		font-size: 16px
+	+r(767)
+		text-align: center
+		margin-top: 10px
+.tabs__article
+	margin-top: 50px
+	position: relative
+	&:before, &:after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 1px
+		background: $gray
+		left: 0
+		opacity: 0.3
+	&:before
+		top: -20px
+		+r(767)
+			top: -4px
+	&:after
+		bottom: -20px
+		+r(767)
+			bottom: -4px
+	+r(767)
+		margin-top: 10px
+.tabs__links
+	display: inline-block
+	position: absolute
+	bottom: 17px
+	right: 19px
+	+r(1199)
+		position: relative
+		bottom: 0
+		right: 0
+		display: block
+		text-align: right
+		margin-top: 20px
+	+r(767)
+		text-align: center
+		margin-top: 10px
+	a
+		display: inline-block
+		vertical-align: middle
+		margin-right: 10px
+		opacity: 0.5
+		transition: opacity .3s
+		+rmin(1200)
+			&:hover
+				opacity: 1
+		&:nth-of-type(1)
+			+s(f2)
+		&:nth-of-type(2)
+			+s(tw2)
+		&:nth-of-type(3)
+			+s(p)
+		&:nth-of-type(4)
+			+s(letter)
+		&:nth-of-type(5)
+			+s(print)
+.tabs-nav__item
+	display: inline-block
+	margin-right: 5px
+	+r(1199)
+		margin-bottom: 5px
+	a
+		width: 180px
+		height: 117px
+		+cover
+		display: block
+		+r(1199)
+			width: 150px
+			height: 90px
+		+r(767)
+			width: 100px
+			height: 60px
+.tabs-nav
+	margin-top: 10px
+	+r(767)
+		text-align: center
+		margin-top: 0
+		

@@ -3,6 +3,7 @@
 //=include lib/jquery.min.js
 //=include lib/slick.min.js
 //=include lib/svgxuse.min.js
+//=include lib/jquery-ui.min.js
 
 sayHello();
 
@@ -29,10 +30,23 @@ $(".menu__item").on("click", function(){
 $(".menu-btn").on("click", function(){
 	$(this).toggleClass("btn-is-active");
 	$(".header__menu").slideToggle();
-	$(".menu__item").removeClass("menu-btn");
+	//$(".menu__item").removeClass("menu-btn");
 	$(".menu__item").children(".sub-menu").slideUp();
 });
 /////////////
+$("#tabs").tabs({
+	collapsible: true,
+	show: { effect: "fadeIn", duration: 300},
+	hide: { effect: "fadeOut", duration: 300}
+});
 
+
+/*begin 767*/
+var windowWidth = $(window).width();
+if(windowWidth < 767){
+	var tabnav = $(".tabs-nav").detach();
+	$(".tabs").prepend(tabnav);
+};
+/*end >767*/
 	///////////
 });
