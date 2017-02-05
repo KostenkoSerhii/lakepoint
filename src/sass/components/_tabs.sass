@@ -129,4 +129,49 @@
 	+r(767)
 		text-align: center
 		margin-top: 0
-		
+// gallery style begin
+.gallery__nav
+	text-align: center
+	margin-bottom: 47px
+.gallery__nav-item
+	transition: all .3s
+	display: inline-block
+	margin-right: 7px
+	&:last-of-type
+		margin-right: 0
+	a
+		display: inline-block
+		min-width: 168px
+		height: 38px
+		border: 1px solid $orange
+		color: #000
+		font: 400 16px "Open Sans", sans-serif
+		text-transform: uppercase
+		padding: 6px 15px
+.ui-tabs-active
+	background: $orange
+	a
+		color: #fff
+.gallery__tabs-item
+	text-align: justify
+
+.gallery-block__img
+	width: 328px
+	height: 212px
+.gallery-block
+	position: relative
+	width: 328px
+	height: 212px
+	display: inline-block
+	margin: 0 5px 44px 0
+	a
+		display: block
+.gallery-block__desc
+	display: none
+	background: green
+	opacity: 0
+	position: absolute
+	width: 100%
+	height: 100%
+	left: 0
+	top: 0

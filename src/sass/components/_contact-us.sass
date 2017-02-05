@@ -1,0 +1,79 @@
+.contact-us
+	padding-top: 42px
+	text-align: center
+	.contact-adress, .contact-phone, .contact-mail
+		font: 300 22px/1.3em "Open Sans", sans-serif
+		color: $menu-color
+		text-transform: uppercase
+	.contact-mail
+		display: inline-block
+		color: $green
+		margin-top: 36px
+	.contact-adress
+		margin-top: 50px
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			bottom: -17px
+			left: 50%
+			transform: translateX(-50%)
+			width: 45px
+			height: 1px
+			background: #bcc0bd
+.contact-us__h2
+	margin-bottom: 64px
+.form
+	margin: 0 6%
+	+r(767)
+		margin: 0
+.form__input-wrapper
+	+clr
+.form__textarea, .form__input
+	padding: 12px 15px
+	border: 1px solid #dbd8d0
+	color: $main-text-color
+	font: $main-text-font
+	&::placeholder
+		text-align: center
+	+rmin(1200)
+		transition: all .3s
+		&:focus
+			border-color: gray
+.form__textarea
+	margin-top: 20px
+	display: block
+	width: 100%
+	resize: none
+	height: 280px
+	+r(767)
+		height: 150px
+		margin-top: 0
+.form__input
+	display: inline-block
+	height: 45px
+	width: 31%
+	&:nth-of-type(1)
+		float: left
+	&:nth-of-type(2)
+		float: right
+	+r(767)
+		width: 100%
+		float: none!important
+		margin-bottom: 15px
+.form__textarea
+	&::placeholder
+		line-height: 250px
+		font-size: 24px
+		+r(767)
+			line-height: 120px
+.form__btn
+	margin-top: 40px
+	text-align: right
+	position: relative
+	padding-right: 32px
+	&:before
+		content: ''
+		+vcenter
+		left: 24%
+		+s(submit)

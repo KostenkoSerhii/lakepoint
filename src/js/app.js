@@ -4,6 +4,7 @@
 //=include lib/slick.min.js
 //=include lib/svgxuse.min.js
 //=include lib/jquery-ui.min.js
+//=include lib/jquery.magnific-popup.min.js
 
 sayHello();
 
@@ -39,6 +40,13 @@ $("#tabs").tabs({
 	show: { effect: "fadeIn", duration: 300},
 	hide: { effect: "fadeOut", duration: 300}
 });
+$("#gallery-tabs").tabs({
+	collapsible: true,
+	show: { effect: "fadeIn", duration: 300},
+	hide: { effect: "fadeOut", duration: 300}
+});
+
+
 
 
 /*begin 767*/
@@ -48,5 +56,21 @@ if(windowWidth < 767){
 	$(".tabs").prepend(tabnav);
 };
 /*end >767*/
+
+	$(".gallery-block a").magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		image: {
+			verticalFit: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300
+		}
+	});
+
+
+
+
 	///////////
 });

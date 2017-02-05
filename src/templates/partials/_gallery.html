@@ -3,22 +3,57 @@
 	<!--begin container-->
 	<div class="container">
 		<h2 class="h2 gallery__h2">A view of lakepoint crest</h2>
-		<div id="gallery__tabs">
-			<ul>
-				<li><a href="#tabs-1">Nunc tincidunt</a></li>
-				<li><a href="#tabs-2">Proin dolor</a></li>
-				<li><a href="#tabs-3">Aenean lacinia</a></li>
-			</ul>
-			<div id="tabs-1">
-
-			</div>
-			<div id="tabs-2">
-
-			</div>
-			<div id="tabs-3">
-
+		<!-- begin gallery__wrapper -->
+		<div class="gallery__wrapper">
+			<div class="gallery__tabs" id="gallery-tabs">
+				<ul class="gallery__nav">
+					<li class="gallery__nav-item"><a href="#gallery-1">Model exteriors</a></li>
+					<li class="gallery__nav-item"><a href="#gallery-2">Model interiors</a></li>
+					<li class="gallery__nav-item"><a href="#gallery-3">community</a></li>
+				</ul>
+				{% import "data/data.html" as tests %}
+				<div class="gallery__tabs-item" id="gallery-1">
+					{% for test in tests.gallery %}
+					<div class="gallery-block">
+						<a href="{{test.img}}">
+						<img class="gallery-block__img" src="{{test.img}}">
+						</a>
+						<div class="gallery-block__desc">
+							<strong>{{test.desc1}}</strong>
+							<strong>{{test.desc2}}</strong>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+				<div class="gallery__tabs-item" id="gallery-2">
+					{% for test in tests.gallery %}
+					<div class="gallery-block">
+						<a href="{{test.img}}">
+						<img class="gallery-block__img" src="{{test.img}}">
+						</a>
+						<div class="gallery-block__desc">
+							<strong>{{test.desc1}}</strong>
+							<strong>{{test.desc2}}</strong>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+				<div class="gallery__tabs-item" id="gallery-3">
+					{% for test in tests.gallery %}
+					<div class="gallery-block">
+						<a href="{{test.img}}">
+						<img class="gallery-block__img" src="{{test.img}}">
+						</a>
+						<div class="gallery-block__desc">
+							<strong>{{test.desc1}}</strong>
+							<strong>{{test.desc2}}</strong>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
 			</div>
 		</div>
+		<!-- end gallery__wrapper -->
 	</div>
 	<!--end container-->
 </div>
