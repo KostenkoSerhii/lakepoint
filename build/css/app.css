@@ -1450,6 +1450,7 @@ a {
 .gallery-block__img {
   width: 328px;
   height: 212px;
+  display: block;
 }
 
 .gallery-block {
@@ -1466,17 +1467,44 @@ a {
 
 .gallery-block a {
   display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery-block a:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background: green;
+  opacity: 0;
+  transition: all .3s;
 }
 
 .gallery-block__desc {
-  display: none;
-  background: green;
+  transition: all .3s;
   opacity: 0;
   position: absolute;
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
+  color: #fff;
+  font: 300 16px/1.25em "Open Sans", sans-serif;
+  font-size: 20px;
+  padding: 35px 22px 0;
+}
+
+.gallery-block__desc strong {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.gallery-block__desc strong:last-of-type {
+  margin-bottom: 0;
 }
 
 .gallery {
@@ -1741,6 +1769,12 @@ a {
   .tabs__links a:hover{
     opacity: 1;
   }
+  .gallery-block a:hover:before{
+    opacity: 0.4;
+  }
+  .gallery-block a:hover .gallery-block__desc{
+    opacity: 1;
+  }
   .form__textarea, .form__input{
     transition: all .3s;
   }
@@ -1909,6 +1943,13 @@ a {
   .tabs-nav__item a{
     width: 150px;
     height: 90px;
+  }
+  .gallery-block a:before{
+    opacity: 0.2;
+  }
+  .gallery-block__desc{
+    opacity: 1;
+    font-size: 16px;
   }
 }
 
@@ -2137,6 +2178,10 @@ a {
     margin: 0 auto 5px !important;
     width: 130px;
     height: 60px;
+  }
+  .gallery-block__desc{
+    padding: 10px;
+    font-size: 10px;
   }
   .google-map{
     height: 250px;

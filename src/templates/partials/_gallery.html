@@ -16,12 +16,13 @@
 					{% for test in tests.gallery %}
 					<div class="gallery-block">
 						<a href="{{test.img}}">
-						<img class="gallery-block__img" src="{{test.img}}">
+							<img class="gallery-block__img" src="{{test.img}}" alt="alt">
+							<div class="gallery-block__desc">
+								<strong>{{test.desc1}}</strong>
+								<strong>{{test.desc2}}</strong>
+							</div>
 						</a>
-						<div class="gallery-block__desc">
-							<strong>{{test.desc1}}</strong>
-							<strong>{{test.desc2}}</strong>
-						</div>
+
 					</div>
 					{% endfor %}
 				</div>
@@ -29,12 +30,12 @@
 					{% for test in tests.gallery %}
 					<div class="gallery-block">
 						<a href="{{test.img}}">
-						<img class="gallery-block__img" src="{{test.img}}">
-						</a>
+							<img class="gallery-block__img" src="{{test.img}}" alt="alt">
 						<div class="gallery-block__desc">
 							<strong>{{test.desc1}}</strong>
 							<strong>{{test.desc2}}</strong>
 						</div>
+						</a>
 					</div>
 					{% endfor %}
 				</div>
@@ -42,12 +43,12 @@
 					{% for test in tests.gallery %}
 					<div class="gallery-block">
 						<a href="{{test.img}}">
-						<img class="gallery-block__img" src="{{test.img}}">
-						</a>
+							<img class="gallery-block__img" src="{{test.img}}" alt="alt">
 						<div class="gallery-block__desc">
 							<strong>{{test.desc1}}</strong>
 							<strong>{{test.desc2}}</strong>
 						</div>
+						</a>
 					</div>
 					{% endfor %}
 				</div>
