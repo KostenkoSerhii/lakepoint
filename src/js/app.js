@@ -4,6 +4,7 @@
 //=include lib/slick.min.js
 //=include lib/svgxuse.min.js
 //=include lib/jquery-ui.min.js
+//=include lib/scrollto.min.js
 //=include lib/jquery.magnific-popup.min.js
 
 sayHello();
