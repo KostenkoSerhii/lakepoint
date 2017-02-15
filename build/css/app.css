@@ -1194,7 +1194,7 @@ a {
 .slick-arrow {
   width: 24px;
   height: 37px;
-  z-index: 222;
+  z-index: 22;
   top: 43%;
 }
 
@@ -2081,7 +2081,7 @@ a {
     margin: 0;
     top: 30px;
     text-align: right;
-    z-index: 22;
+    z-index: 23;
   }
   .header__menu .menu__item{
     display: block;
