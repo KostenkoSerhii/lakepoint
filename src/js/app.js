@@ -4,7 +4,6 @@
 //=include lib/slick.min.js
 //=include lib/svgxuse.min.js
 //=include lib/jquery-ui.min.js
-//=include lib/scrollto.min.js
 //=include lib/jquery.magnific-popup.min.js
 
 sayHello();
@@ -16,37 +15,33 @@ $(document).ready(function(){
 	});
 //////slick
 
-//var hasSubMenu = $(".menu__item").children(".sub-menu");
-$(".menu__item").on("click", function(e){
-	var $this = $(this);
-	var a =$(this).children("a").attr("href");
-	$(".menu__item").not($this).removeClass("js-menu-active");
-	$($this).addClass("js-menu-active");
-	$(".menu__item").not($this).children(".sub-menu").slideUp();
-	$($this).children(".sub-menu").slideToggle();
-	if($this.has("ul").length > 0){
-		e.preventDefault();
+$(".link-js").on("click", function(e){
+	var _this = $(this);
+	var a = $(this).attr("href");
+	e.preventDefault();
+	$(".link-js").removeClass("js-menu-active");
+	_this.addClass("js-menu-active");
+	$(".link-js").not(_this).next(".sub-menu").slideUp();
+	if(a == "#" && _this.next("ul")){
+		_this.next(".sub-menu").slideToggle();
 	}else{
-		return $.scrollTo(a,500),!1
+		$("html, body").animate({
+			scrollTop: $(a).offset().top
+		}, 500);
 	};
+
 });
 
-
-
-
-// СМОТРЕТЬ ТУТ!!! 
-/*по задумке необходимо при клике на пункт подменю взять в переменную
-b значение атрибута href, найти елемент 'tabs-nav__item a' со значением 
-атрибута b, емулировать на нем клик и сделать к нему скролл...
-наколдовал как-то так, но нифига не работает, help!!!*/
-$(".sub-menu__item").on("click", function(){
-	var b = $(this).children("a").attr("href");
-	var thisLink = $(".tabs-nav__item ").find("a [href=b]");
-	//console.log("+");
-	thisLink.trigger("click");
-	return $.scrollTo(b,500),!1
+$(".sub-link-js").on("click", function(e){
+	e.preventDefault();
+	var b = $(this).attr("data-tab-index")
+	//console.log(b);
+	$('#tabs').tabs("option", "active", b );
+	$(this).parent().parent().slideUp();
+	$("html, body").animate({
+		scrollTop: $('#homes').offset().top
+	}, 500);
 });
-// СМОТРЕТЬ ТУТ!!! 
 
 
 

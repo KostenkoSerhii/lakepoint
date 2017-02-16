@@ -6,15 +6,13 @@
 	z-index: 22
 	+r(1499)
 		margin-top: 10px
-.menu__item
-	a
-		color: $menu-color
-		font: 300 16px/2em $sans
-		text-transform: uppercase
-		transition: all .3s
+.menu__link
+	color: $menu-color
+	font: 300 16px/2em $sans
+	text-transform: uppercase
+	transition: all .3s
 .js-menu-active
-	>a
-		color: $menu-active-color
+	color: $menu-active-color
 .sidebar__sub-menu
 	display: none
 	+rh(850)
@@ -22,15 +20,15 @@
 		left: 50%
 		transform: translateX(-50%)
 		background: #fff
-.sub-menu__item
-	a
-		font-size: 14px
-		line-height: 1.6em
-		text-transform: none
-		font-style: italic
-		+r(991)
-			display: block
-			padding: 5px 0
+.sub-menu__link
+	color: $menu-color
+	font-size: 14px
+	line-height: 1.6em
+	text-transform: none
+	font-style: italic
+	+r(991)
+		display: block
+		padding: 5px 0
 .header__menu
 	float: right
 	margin-right: 20px
@@ -44,16 +42,16 @@
 		top: 30px
 		text-align: right
 		z-index: 23
-	.menu__item
-		display: inline-block
-		margin-right: 10px
-		+r(992)
-			&:last-of-type
-			margin-right: 0
-		+r(991)
-			margin-right: 5px
-		+r(767)
-			display: block
+.menu__item
+	display: inline-block
+	margin-right: 10px
+	+r(991)
+		&:last-of-type
+		margin-right: 0
+	//+r(991)
+	//	margin-right: 5px
+	+r(767)
+		display: block
 .header__sub-menu
 	display: none
 	position: absolute

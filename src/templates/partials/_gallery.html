@@ -7,15 +7,15 @@
 		<div class="gallery__wrapper">
 			<div class="gallery__tabs" id="gallery-tabs">
 				<ul class="gallery__nav">
-					<li class="gallery__nav-item"><a href="#gallery-1">Model exteriors</a></li>
-					<li class="gallery__nav-item"><a href="#gallery-2">Model interiors</a></li>
-					<li class="gallery__nav-item"><a href="#gallery-3">community</a></li>
+					<li class="gallery__nav-item"><a class="gallery__nav-link" href="#gallery-1">Model exteriors</a></li>
+					<li class="gallery__nav-item"><a class="gallery__nav-link" href="#gallery-2">Model interiors</a></li>
+					<li class="gallery__nav-item"><a class="gallery__nav-link" href="#gallery-3">community</a></li>
 				</ul>
 				{% import "data/data.html" as tests %}
 				<div class="gallery__tabs-item" id="gallery-1">
 					{% for test in tests.gallery %}
 					<div class="gallery-block">
-						<a href="{{test.img}}">
+						<a  class="gallery-block__link"href="{{test.img}}">
 							<img class="gallery-block__img" src="{{test.img}}" alt="alt">
 							<div class="gallery-block__desc">
 								<strong>{{test.desc1}}</strong>
@@ -29,7 +29,7 @@
 				<div class="gallery__tabs-item" id="gallery-2">
 					{% for test in tests.gallery %}
 					<div class="gallery-block">
-						<a href="{{test.img}}">
+						<a class="gallery-block__link" href="{{test.img}}">
 							<img class="gallery-block__img" src="{{test.img}}" alt="alt">
 						<div class="gallery-block__desc">
 							<strong>{{test.desc1}}</strong>
@@ -42,7 +42,7 @@
 				<div class="gallery__tabs-item" id="gallery-3">
 					{% for test in tests.gallery %}
 					<div class="gallery-block">
-						<a href="{{test.img}}">
+						<a class="gallery-block__link" href="{{test.img}}">
 							<img class="gallery-block__img" src="{{test.img}}" alt="alt">
 						<div class="gallery-block__desc">
 							<strong>{{test.desc1}}</strong>

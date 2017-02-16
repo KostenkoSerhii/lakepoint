@@ -848,10 +848,6 @@ a {
   font: 300 16px/1.25em "Open Sans", sans-serif;
 }
 
-.contact-phone {
-  margin-bottom: 10px;
-}
-
 .article {
   color: #1d1c1c;
   font: 300 16px/1.25em "Open Sans", sans-serif;
@@ -967,15 +963,15 @@ a {
   z-index: 222;
 }
 
-.sidebar .logo2 {
+.sidebar__logo2 {
   margin-bottom: 30px;
 }
 
-.sidebar .socials {
+.sidebar__socials {
   margin-top: 30px;
 }
 
-.sidebar .socials:before {
+.sidebar__socials:before {
   content: '';
   position: absolute;
   left: 50%;
@@ -995,6 +991,11 @@ a {
 
 .sidebar__h1:after {
   right: -8px;
+}
+
+.sidebar__contact-phone {
+  margin-bottom: 10px;
+  display: inline-block;
 }
 
 .sidebar__footer {
@@ -1042,14 +1043,14 @@ a {
   z-index: 22;
 }
 
-.menu__item a {
+.menu__link {
   color: #7b7b7b;
   font: 300 16px/2em "Open Sans", sans-serif;
   text-transform: uppercase;
   transition: all .3s;
 }
 
-.js-menu-active > a {
+.js-menu-active {
   color: #40173f;
 }
 
@@ -1057,7 +1058,8 @@ a {
   display: none;
 }
 
-.sub-menu__item a {
+.sub-menu__link {
+  color: #7b7b7b;
   font-size: 14px;
   line-height: 1.6em;
   text-transform: none;
@@ -1070,7 +1072,7 @@ a {
   margin-top: 20px;
 }
 
-.header__menu .menu__item {
+.menu__item {
   display: inline-block;
   margin-right: 10px;
 }
@@ -1156,31 +1158,31 @@ a {
   padding: 20px 0;
 }
 
-.footer .container {
+.footer__container {
   *zoom: 1;
 }
 
-.footer .container:after {
+.footer__container:after {
   content: " ";
   display: table;
   clear: both;
 }
 
-.footer .logo2 {
+.footer__logo {
   float: left;
 }
 
-.footer .wrapper {
+.footer__wrapper {
   float: right;
   margin-top: 15px;
 }
 
-.footer .contact-phone, .footer .contact-mail, .footer .socials {
+.footer__contact-phone, .footer__contact-mail, .footer__socials {
   display: block;
   text-align: right;
 }
 
-.footer .contact-mail {
+.footer__contact-mail {
   margin-bottom: 10px;
 }
 
@@ -1424,7 +1426,7 @@ a {
   margin-right: 0;
 }
 
-.gallery__nav-item a {
+.gallery__nav-link {
   display: block;
   min-width: 168px;
   height: 38px;
@@ -1465,13 +1467,13 @@ a {
   margin: 0 0% 44px 0;
 }
 
-.gallery-block a {
+.gallery-block__link {
   display: block;
   overflow: hidden;
   position: relative;
 }
 
-.gallery-block a:before {
+.gallery-block__link:before {
   position: absolute;
   top: 0;
   left: 0;
@@ -1537,24 +1539,24 @@ a {
   text-align: center;
 }
 
-.contact-us .contact-adress, .contact-us .contact-phone, .contact-us .contact-mail {
+.contact-us__adress, .contact-us__mail, .contact-us__phone {
   font: 300 22px/1.3em "Open Sans", sans-serif;
   color: #7b7b7b;
   text-transform: uppercase;
 }
 
-.contact-us .contact-mail {
+.contact-us__mail {
   display: inline-block;
   color: #2c775a;
   margin-top: 36px;
 }
 
-.contact-us .contact-adress {
+.contact-us__adress {
   margin-top: 50px;
   position: relative;
 }
 
-.contact-us .contact-adress:after {
+.contact-us__adress:after {
   content: '';
   position: absolute;
   bottom: -17px;
@@ -1769,10 +1771,10 @@ a {
   .tabs__links a:hover{
     opacity: 1;
   }
-  .gallery-block a:hover:before{
+  .gallery-block__link:hover:before{
     opacity: 0.4;
   }
-  .gallery-block a:hover .gallery-block__desc{
+  .gallery-block__link:hover .gallery-block__desc{
     opacity: 1;
   }
   .form__textarea, .form__input{
@@ -1944,18 +1946,12 @@ a {
     width: 150px;
     height: 90px;
   }
-  .gallery-block a:before{
+  .gallery-block__link:before{
     opacity: 0.2;
   }
   .gallery-block__desc{
     opacity: 1;
     font-size: 16px;
-  }
-}
-
-@media only screen and (max-width: 992px){
-  .header__menu .menu__item{
-    margin-right: 0;
   }
 }
 
@@ -1980,12 +1976,12 @@ a {
   .header__wrapper{
     margin-left: 0;
   }
-  .sub-menu__item a{
+  .sub-menu__link{
     display: block;
     padding: 5px 0;
   }
-  .header__menu .menu__item{
-    margin-right: 5px;
+  .menu__item{
+    margin-right: 0;
   }
   .slide{
     height: 500px;
@@ -2083,7 +2079,7 @@ a {
     text-align: right;
     z-index: 23;
   }
-  .header__menu .menu__item{
+  .menu__item{
     display: block;
   }
   .header__sub-menu{
@@ -2093,13 +2089,13 @@ a {
   .footer{
     text-align: center;
   }
-  .footer .logo2{
+  .footer__logo{
     float: none;
   }
-  .footer .wrapper{
+  .footer__wrapper{
     float: none;
   }
-  .footer .contact-phone, .footer .contact-mail, .footer .socials{
+  .footer__contact-phone, .footer__contact-mail, .footer__socials{
     text-align: center;
   }
   .slide{
@@ -2186,7 +2182,7 @@ a {
   .google-map{
     height: 250px;
   }
-  .contact-us .contact-adress, .contact-us .contact-phone, .contact-us .contact-mail{
+  .contact-us__adress, .contact-us__mail, .contact-us__phone{
     font-size: 16px;
   }
   .form{
@@ -2259,15 +2255,15 @@ a {
   }
 }
 
-@media only screen and (max-width: 400px){
-  .slide{
-    height: 200px;
-  }
-}
-
 @media only screen and (max-height: 900px){
   .sidebar__footer{
     bottom: 5px;
+  }
+}
+
+@media only screen and (max-width: 400px){
+  .slide{
+    height: 200px;
   }
 }
 

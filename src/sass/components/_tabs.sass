@@ -143,15 +143,15 @@
 		margin: 0 auto 10px!important
 		display: block
 		width: 280px
-	a
-		display: block
-		min-width: 168px
-		height: 38px
-		border: 1px solid $orange
-		color: #000
-		font: 400 16px "Open Sans", sans-serif
-		text-transform: uppercase
-		padding: 6px 15px
+.gallery__nav-link
+	display: block
+	min-width: 168px
+	height: 38px
+	border: 1px solid $orange
+	color: #000
+	font: 400 16px "Open Sans", sans-serif
+	text-transform: uppercase
+	padding: 6px 15px
 .ui-tabs-active
 	background: $orange
 	a
@@ -195,24 +195,24 @@
 		margin: 0 auto 5px!important
 		width: 130px
 		height: 60px
-	a
-		display: block
-		overflow: hidden
-		position: relative
-		&:before
-			+coverdiv
-			content: ''
-			background: green
-			opacity: 0
-			transition: all .3s
-			+r(1199)
-				opacity: 0.2
-		+rmin(1200)
-			&:hover
-				&:before
-					opacity: 0.4
-				.gallery-block__desc
-					opacity: 1
+.gallery-block__link
+	display: block
+	overflow: hidden
+	position: relative
+	&:before
+		+coverdiv
+		content: ''
+		background: green
+		opacity: 0
+		transition: all .3s
+		+r(1199)
+			opacity: 0.2
+	+rmin(1200)
+		&:hover
+			&:before
+				opacity: 0.4
+			.gallery-block__desc
+				opacity: 1
 .gallery-block__desc
 	transition: all .3s
 	opacity: 0
