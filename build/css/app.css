@@ -2081,10 +2081,12 @@ a {
   }
   .menu__item{
     display: block;
+    padding: 0 5px;
   }
   .header__sub-menu{
     margin-left: 0;
     width: 100%;
+    left: 0;
   }
   .footer{
     text-align: center;

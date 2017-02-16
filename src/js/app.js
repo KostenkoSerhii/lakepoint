@@ -9,6 +9,7 @@
 sayHello();
 
 $(document).ready(function(){
+	var windowWidth = $(window).width();
 
 	$('.js-slider').slick({
 		arrows: true
@@ -22,14 +23,20 @@ $(".link-js").on("click", function(e){
 	$(".link-js").removeClass("js-menu-active");
 	_this.addClass("js-menu-active");
 	$(".link-js").not(_this).next(".sub-menu").slideUp();
-	if(a == "#" && _this.next("ul")){
+
+	if(a == "#" && _this.next().is(".sub-menu")){
 		_this.next(".sub-menu").slideToggle();
+
 	}else{
 		$("html, body").animate({
 			scrollTop: $(a).offset().top
 		}, 500);
+		
+		if(windowWidth < 767){
+			$(".menu-btn").trigger('click');
+		};
+		
 	};
-
 });
 
 $(".sub-link-js").on("click", function(e){
@@ -41,6 +48,11 @@ $(".sub-link-js").on("click", function(e){
 	$("html, body").animate({
 		scrollTop: $('#homes').offset().top
 	}, 500);
+
+	if(windowWidth < 767){
+		$(".menu-btn").trigger('click');
+	};
+
 });
 
 
@@ -65,7 +77,7 @@ $("#gallery-tabs").tabs({
 
 
 /*begin 767*/
-var windowWidth = $(window).width();
+
 if(windowWidth < 767){
 	var tabnav = $(".tabs-nav").detach();
 	$(".tabs").prepend(tabnav);

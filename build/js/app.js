@@ -3478,6 +3478,7 @@ function sayHello() {
 sayHello();
 
 $(document).ready(function () {
+	var windowWidth = $(window).width();
 
 	$('.js-slider').slick({
 		arrows: true
@@ -3491,12 +3492,17 @@ $(document).ready(function () {
 		$(".link-js").removeClass("js-menu-active");
 		_this.addClass("js-menu-active");
 		$(".link-js").not(_this).next(".sub-menu").slideUp();
-		if (a == "#" && _this.next("ul")) {
+
+		if (a == "#" && _this.next().is(".sub-menu")) {
 			_this.next(".sub-menu").slideToggle();
 		} else {
 			$("html, body").animate({
 				scrollTop: $(a).offset().top
 			}, 500);
+
+			if (windowWidth < 767) {
+				$(".menu-btn").trigger('click');
+			};
 		};
 	});
 
@@ -3509,6 +3515,10 @@ $(document).ready(function () {
 		$("html, body").animate({
 			scrollTop: $('#homes').offset().top
 		}, 500);
+
+		if (windowWidth < 767) {
+			$(".menu-btn").trigger('click');
+		};
 	});
 
 	$(".menu-btn").on("click", function () {
@@ -3528,7 +3538,7 @@ $(document).ready(function () {
 	});
 
 	/*begin 767*/
-	var windowWidth = $(window).width();
+
 	if (windowWidth < 767) {
 		var tabnav = $(".tabs-nav").detach();
 		$(".tabs").prepend(tabnav);
